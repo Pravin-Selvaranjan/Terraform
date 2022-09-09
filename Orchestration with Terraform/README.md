@@ -15,6 +15,7 @@
 - Easily portable to any other provider
 - Supports Client only architecture, so no need for additional configuration management on a server
 
+![Blank diagram (12)](https://user-images.githubusercontent.com/110179866/189342050-9bb50509-104f-4388-b3e1-230d76518bf6.jpeg)
 
 
 ## Steps to take in order to utilise Terraform
