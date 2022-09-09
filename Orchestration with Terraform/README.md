@@ -81,3 +81,5 @@ resource "aws_instance" "app_instance" {
   - `workspace`     Workspace management
 
 
+# How to create a VPC and use a variable.tf file for abstraction 
+

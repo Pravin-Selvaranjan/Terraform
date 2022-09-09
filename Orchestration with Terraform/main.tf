@@ -25,7 +25,7 @@ resource "aws_subnet" "pravin_public" {
 # private subnet
 resource "aws_subnet" "pravin_private" {
     vpc_id = aws_vpc.pravin_vpc.id   # can also just assign the id of the chosen vpc
-    cidr_block = "10.0.15.0/24"
+    cidr_block = var.priv_cidr_block.id
 
     tags = {
       "Name" = "eng122-pravin-vpc-private"
@@ -63,7 +63,7 @@ resource "aws_route_table_association" "pravin_connect_route_to_public" {
 
 # ec2
 resource "aws_instance" "eng122_pravin_app_terraform" {
-    ami = "ami-0c505a1529b8253e8"
+    ami = var.pravin_app_ami.id
 
     instance_type = "t2.micro"
 
@@ -75,6 +75,6 @@ resource "aws_instance" "eng122_pravin_app_terraform" {
       "Name" = "eng122_pravin_app_terraform"
     }
 
-    key_name = "eng122_pravin_key1"
+    key_name = var.pravin_sparta_key.id
 
 }
